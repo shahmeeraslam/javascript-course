@@ -1,30 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>second Task</title>
 </head>
 <style>
-    body{
+    body {
         background-color: black;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        gap: 8px;
+        flex-wrap: wrap;
+        text-transform: capitalize;
+        align-items: center;
     }
-    h1{
+
+    h1 {
         background-color: white;
+        padding: 5px;
+        color: black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+    }
+
+    button {
+        width: 100px;
+        height: 40px;
     }
 </style>
-<body> 
+
+<body>
+<!-- basic btns tasks -->
+    <h1>console base system </h1>
+    <button onclick="
+     cartQauntity+=4;
+     console.log(cartQauntity);">+4</button>
+    <button onclick="
+     cartQauntity+=5;
+     console.log(cartQauntity);">+5</button>
+    <button onclick="
+     cartQauntity--;
+     console.log(cartQauntity);">remove item </button>
+    <button onclick="
+     cartQauntity-=2;
+     console.log(cartQauntity);">-2</button>
+    <button onclick="
+     cartQauntity-=3;
+     console.log(cartQauntity);">-3</button>
+
+
+
     <script>
+        let cartQauntity = 0
         let name = 'shahmeer'
-        console.log(`My name is ${name}`);
         let coffee = 5;
-        let bagels = 3*2;
+        let bagels = 3 * 2;
         let soup = 9;
-        let Total_cost = coffee + bagels + soup;
-        console.log(`Total cost $${Total_cost}`);
-        document.body.innerHTML = `<h1>Total cost of ${Total_cost}</h1>`;   
+        let _cost = coffee + bagels + soup;
+        let cost = coffee + bagels;
+        let result = cost * 0.1
+        let Total_cost = result + cost;
+        console.log(`My name is ${name}`);
+        console.log(`Cost of food  $${cost}`);
+        console.log(`cost $${_cost}`);
+        // document.body.innerHTML = `<h1>Cost of Products $${Total_cost} </h1>
+        //    <h1>  Cost of food $${cost}</h1>
+        //    <h1>10% tax on cost of food $${result}</h1>
+        //    <h1>Total cost of food $${Total_cost}</h1> `;     
     </script>
 </body>
+
 </html>
